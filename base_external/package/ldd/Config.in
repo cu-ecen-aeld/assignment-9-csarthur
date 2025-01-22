@@ -2,5 +2,4 @@
 config BR2_PACKAGE_LDD
 	bool "ldd"
 	help
-	  Includes the writer executable, finder.sh and tester.sh in the kernel image.
-	  Used to understand buildroot external trees and package builds.
+	  Includes misc-modules and scull.
