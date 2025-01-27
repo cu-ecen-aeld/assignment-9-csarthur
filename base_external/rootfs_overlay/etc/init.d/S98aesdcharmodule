@@ -1,0 +1,21 @@
+#!/bin/sh
+rc=0
+case "$1" in
+    start) 
+        echo "Starting aesdchar"
+        /usr/bin/module_load aesdchar
+        if [ $? -ne 0 ]; then
+            echo "Failed to load module aesdchar"
+            exit 1
+        fi
+    ;;
+    stop)
+        echo "Stopping aesdchar"
+        /usr/bin/module_unload aesdchar
+    ;;
+    *)
+        echo "usage: $0 {start | stop}"
+        exit 1        
+esac
+
+exit 0
